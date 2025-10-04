@@ -1,3 +1,9 @@
+![Azure](https://img.shields.io/badge/Azure-Functions-blue?logo=microsoft-azure)
+![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
+![Terraform](https://img.shields.io/badge/Terraform-IaC-purple?logo=terraform)
+![OpenAI](https://img.shields.io/badge/Azure-OpenAI-green)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 # Azure Blob AI Document Summarizer
 
 Automatically generate AI-powered summaries for documents uploaded to Azure Blob Storage using Azure OpenAI.
