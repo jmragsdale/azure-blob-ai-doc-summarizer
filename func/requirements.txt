@@ -1,0 +1,5 @@
+openai==1.42.0
+azure-functions
+azure-storage-blob
+pypdf
+python-docx
