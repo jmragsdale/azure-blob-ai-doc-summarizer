@@ -14,6 +14,14 @@ This serverless application monitors an Azure Blob Storage container for new doc
 
 ## Architecture
 
+<img src="docs/images/azure_svg_diagram.svg" alt="Architecture Diagram" width="800"/>
+
+## Process Flow
+
+<img src="docs/images/azure_flow_diagram.svg" alt="Process Flow" width="600"/>
+
+## Architecture
+
 ```
 ┌─────────────┐
 │   Upload    │
