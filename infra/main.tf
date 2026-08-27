@@ -1,7 +1,15 @@
 terraform {
-  required_providers { azurerm = { source = "hashicorp/azurerm", version = "~> 3.0" } }
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0"
+    }
+  }
 }
-provider "azurerm" { features {} }
+
+provider "azurerm" {
+  features {}
+}
 
 resource "azurerm_resource_group" "rg" {
   name     = var.rg_name
@@ -31,12 +39,18 @@ resource "azurerm_service_plan" "plan" {
 }
 
 resource "azurerm_linux_function_app" "func" {
-  name                       = "${var.project}-func"
-  location                   = var.location
-  resource_group_name        = azurerm_resource_group.rg.name
-  storage_account_name       = azurerm_storage_account.sa.name
-  service_plan_id            = azurerm_service_plan.plan.id
-  site_config { application_stack { python_version = "3.11" } }
+  name                 = "${var.project}-func"
+  location             = var.location
+  resource_group_name  = azurerm_resource_group.rg.name
+  storage_account_name = azurerm_storage_account.sa.name
+  service_plan_id      = azurerm_service_plan.plan.id
+
+  site_config {
+    application_stack {
+      python_version = "3.11"
+    }
+  }
+
   app_settings = {
     "BLOB_CONN_STR"            = azurerm_storage_account.sa.primary_connection_string
     "CONTAINER_OUT"            = "summary"
