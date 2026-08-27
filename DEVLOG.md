@@ -3,6 +3,27 @@
 Auto-generated journal of project changes.
 Generated: 2026-01-05 19:39
 
+## 2026-08-27 18:33
+
+**Commit:** `e59360c`
+
+fix(ci): repair invalid HCL that broke terraform init
+
+variables.tf declared its variables as single-line blocks holding two
+arguments each; HCL allows only one argument in single-line form, so
+'terraform init' could not parse the module and CI has been red since
+2026-01-23. Expanded the required_providers, provider features and
+site_config blocks the same way, ran terraform fmt, and marked
+azure_openai_key sensitive.
+
+Verified locally: terraform fmt -check, init -backend=false and
+validate all pass.
+
+**Files:** infra/main.tf,infra/variables.tf
+
+---
+
+
 ## 2026-01-23 12:37
 
 **Commit:** 
