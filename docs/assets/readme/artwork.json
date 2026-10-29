@@ -1,0 +1,77 @@
+{
+  "title": "Azure AI Doc Summarizer",
+  "titleFontSize": 78,
+  "mobileTitle": [
+    "Azure AI",
+    "doc summarizer"
+  ],
+  "eyebrow": "AI + SERVERLESS",
+  "tagline": "From document input to summary.",
+  "mobileTagline": [
+    "From document input",
+    "to summary."
+  ],
+  "description": [
+    "A Blob-triggered Functions reference using Azure OpenAI.",
+    "Document-processing source, Terraform and setup notes."
+  ],
+  "mobileDescription": [
+    "Blob-triggered Functions with Azure OpenAI.",
+    "Document-processing source and setup notes."
+  ],
+  "footerLeft": "PYTHON",
+  "footerMiddle": "AZURE / FUNCTIONS / OPENAI",
+  "footerRight": "DOCUMENT / MODEL / SUMMARY",
+  "diagram": [
+    "INPUT",
+    "MODEL",
+    "SUMMARY"
+  ],
+  "summary": "An Azure document-processing reference using Blob Storage, Functions and Azure OpenAI, with implementation and security documentation.",
+  "cards": [
+    {
+      "slug": "architecture",
+      "category": "ARCHITECTURE",
+      "title": "Follow the architecture",
+      "lines": [
+        "Review the components and the",
+        "documented processing or access flow."
+      ],
+      "footer": "DESIGN / REFERENCE FLOW",
+      "href": "docs/images/azure_svg_diagram.svg"
+    },
+    {
+      "slug": "source",
+      "category": "IMPLEMENTATION",
+      "title": "Inspect the Functions code",
+      "lines": [
+        "Read document processing and",
+        "summary-generation integration."
+      ],
+      "footer": "SOURCE / REFERENCE CODE",
+      "href": "func/BlobSummarize/__init__.py"
+    },
+    {
+      "slug": "setup",
+      "category": "GET STARTED",
+      "title": "Review the setup guide",
+      "lines": [
+        "Read prerequisites and setup steps",
+        "before adapting the example."
+      ],
+      "footer": "SETUP / CONFIGURATION",
+      "href": "#setup-guide"
+    },
+    {
+      "slug": "security",
+      "category": "SECURITY GUIDANCE",
+      "title": "Read security notes",
+      "lines": [
+        "Review identity, secret handling",
+        "and network considerations."
+      ],
+      "footer": "DESIGN / SECURITY NOTES",
+      "href": "#security-guide"
+    }
+  ]
+}

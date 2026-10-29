@@ -1,10 +1,53 @@
-![Azure](https://img.shields.io/badge/Azure-Functions-blue?logo=microsoft-azure)
-![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
-![Terraform](https://img.shields.io/badge/Terraform-IaC-purple?logo=terraform)
-![OpenAI](https://img.shields.io/badge/Azure-OpenAI-green)
-![License](https://img.shields.io/badge/License-MIT-green)
+<a id="azure-blob-ai-document-summarizer"></a>
 
-# Azure Blob AI Document Summarizer
+<a href="#setup-guide">
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/readme/header-mobile.png">
+  <img src="docs/assets/readme/header.png" width="1440" alt="Azure AI Doc Summarizer. An Azure document-processing reference using Blob Storage, Functions and Azure OpenAI, with implementation and security documentation.">
+</picture>
+</a>
+
+<p>
+  <a href="#setup-guide"><strong>Start here ↗</strong></a> &nbsp; / &nbsp;
+  <a href="func/BlobSummarize/__init__.py">Source</a> &nbsp; / &nbsp;
+  <a href="#project-guide">Project guide</a> &nbsp; / &nbsp;
+  <a href="https://github.com/jmragsdale">Profile</a>
+</p>
+
+An Azure document-processing reference using Blob Storage, Functions and Azure OpenAI, with implementation and security documentation.
+
+## Explore the project
+
+Open a card for source, examples or supporting documentation.
+
+<p>
+<a href="docs/images/azure_svg_diagram.svg">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/architecture-dark.png">
+  <img src="docs/assets/readme/architecture-light.png" width="360" alt="Follow the architecture. Review the components and the documented processing or access flow.">
+</picture>
+</a>
+<a href="func/BlobSummarize/__init__.py">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/source-dark.png">
+  <img src="docs/assets/readme/source-light.png" width="360" alt="Inspect the Functions code. Read document processing and summary-generation integration.">
+</picture>
+</a>
+<a href="#setup-guide">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/setup-dark.png">
+  <img src="docs/assets/readme/setup-light.png" width="360" alt="Review the setup guide. Read prerequisites and setup steps before adapting the example.">
+</picture>
+</a>
+<a href="#security-guide">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/security-dark.png">
+  <img src="docs/assets/readme/security-light.png" width="360" alt="Read security notes. Review identity, secret handling and network considerations.">
+</picture>
+</a>
+</p>
+
+## Project guide
 
 Automatically generate AI-powered summaries for documents uploaded to Azure Blob Storage using Azure OpenAI.
 
@@ -14,13 +57,26 @@ This serverless application monitors an Azure Blob Storage container for new doc
 
 ## Architecture
 
+<details>
+<summary>Architecture diagram</summary>
+
 <img src="docs/images/azure_svg_diagram.svg" alt="Architecture Diagram" width="800"/>
+
+</details>
 
 ## Process Flow
 
+<details>
+<summary>Architecture diagram</summary>
+
 <img src="docs/images/azure_flow_diagram.svg" alt="Process Flow" width="600"/>
 
+</details>
+
 ## Architecture
+
+<details>
+<summary>Architecture flow (text)</summary>
 
 ```
 ┌─────────────┐
@@ -56,6 +112,8 @@ This serverless application monitors an Azure Blob Storage container for new doc
 └──────────────────────────────────┘
 ```
 
+</details>
+
 ## Features
 
 - **Automated Document Processing**: Monitors `incoming` container for new documents
@@ -79,6 +137,8 @@ This serverless application monitors an Azure Blob Storage container for new doc
 - **Text** (`.txt`) - Plain text
 - **Word** (`.docx`) - Extracted using python-docx
 - **Markdown** (`.md`) - Plain text
+
+<a id="setup-guide"></a>
 
 ## Setup
 
@@ -242,6 +302,8 @@ az storage blob metadata show \
 - **GPT-3.5 Turbo**: ~$0.0015 per 1K input tokens, ~$0.002 per 1K output tokens
 
 **Estimated cost for 100 documents/month (avg 5 pages each)**: $5-15 USD
+
+<a id="security-guide"></a>
 
 ## Security Best Practices
 
@@ -415,3 +477,21 @@ MIT License - see LICENSE file for details
 
 - Powered by [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service)
 - Infrastructure managed with [Terraform](https://www.terraform.io/)
+
+<details>
+<summary>Project metadata</summary>
+
+![Azure](https://img.shields.io/badge/Azure-Functions-blue?logo=microsoft-azure)
+![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
+![Terraform](https://img.shields.io/badge/Terraform-IaC-purple?logo=terraform)
+![OpenAI](https://img.shields.io/badge/Azure-OpenAI-green)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+</details>
+
+<details>
+<summary>README visual assets</summary>
+
+[Artwork sources and regeneration notes](docs/assets/readme/README.md).
+
+</details>
